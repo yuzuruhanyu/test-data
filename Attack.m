@@ -14,13 +14,13 @@ for method=0:8
     switch method
         case 0 % JPEG Compression
             stren=[1,5,10:20:90,95];
-            dist='JPEG';
+            dist='JPEG_Compression';
         case 1 % Gaussian Noise
             stren=[0.01:0.01:0.05 0.1 0.15  0.2 0.25];
             dist='Gaussian_Noise';
         case 2 % Rotation+Cropping
             stren=[1:4,6:2:10];
-            dist='rotation+cropping';
+            dist='Rotation+Cropping';
         case 3 % Median Filtering
             stren=2:2:20;
             dist='Median_Filtering';
@@ -29,16 +29,16 @@ for method=0:8
             dist='Histogram_Equalization';
         case 5 % Gamma Correction
             stren=[0.55:0.1:0.95, 1.05:0.1:1.45];
-            dist='GAMMA';
+            dist='GAMMA_Correction';
         case 6 % Speckle Noise
             stren=[0.01 0.05 0.1:0.1:0.3];
             dist='Speckle_Noise';
         case 7 % Circular Averaging Filtering
            stren=[1 5 10:5:40];
-           dist='CIRFLT';   
+           dist='Circular_Averaging_Filtering';   
         case 8 % Scaling
            stren=[0.2 0.4 0.5 2 4];
-           dist='SCALE';
+           dist='Scaling';
     end
     
     dis_img_num=size(stren,2);
